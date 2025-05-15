@@ -37,7 +37,7 @@ function App() {
         name="" 
         id=""
         value = {country} 
-        onChange={(e) => {setCountry(e.target.value); setHolidayList(countryList.find(c => c.name === country)?.key)}}
+        onChange={(e) => {setCountry(e.target.value); setHolidayList(countryList.find(c => c.name === e.target.value)?.key)}}
         >
         {countryList.map((country) =>
           <option key={country.key}>{country.name}</option>
